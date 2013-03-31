@@ -1,0 +1,55 @@
+﻿@model TheJWal.Models.EmailModel
+@{
+    ViewBag.Title = "Contact";
+}
+
+<div class="row-fluid">
+    <div class="span7 offset2">
+        @using (Html.BeginForm("Contact", "Home"))
+        {
+        <fieldset>
+            @Html.LabelFor(model => model.Name)
+            <input type="text" name="Name" ng-model="Email.UserName" class="input-xxlarge"/>
+            <label>Your Email Address:</label>
+            <input type="text" name="SenderEmail" class="input-xxlarge" ng-model="Email.SenderEmail"/>
+            @Html.LabelFor(model => model.Subject)
+            <input type="text" name="Subject" class="input-xxlarge" ng-model="Email.Subject"/>
+            
+            @Html.LabelFor(model => model.Message)
+            <textarea rows="8" name="Message" ng-model="Email.Message" class="input-xxlarge" title="Type your message here" id="Message"></textarea>
+            <br />
+            <input type="submit" value="Send Message" class="btn btn-primary btn-large "/>
+            
+        </fieldset>
+        }
+      
+       
+        <div id="preview">
+        <h2>Preview Message:</h2>
+        <p>Hello,</p>
+        <p>{{Email.Message}}</p>
+        <p>Regards,</p>
+        <p><em>{{Email.UserName}}</em></p>
+            <p><em>{{Email.SenderEmail}}</em></p>
+            <p id="testing"></p>
+       </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script type="text/javascript">
+        $("#Contact").addClass("active");
+        $("#preview").hide();
+    </script>
+    <script type="text/javascript">
+        $("#Message").keyup(function(event) {
+            var check = document.getElementById("Message");
+            if (check.value.length > 0) {
+                $("#preview").show();
+            } else{
+                $("#preview").hide();
+            }
+        });
+    </script>
+}
