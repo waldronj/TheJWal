@@ -40,7 +40,11 @@ local.properties
 *.suo
 *.user
 *.sln.docstates
+<<<<<<< HEAD
 Web.config
+=======
+web.config
+>>>>>>> d742434b7ce6d4a3b75ee8a74113c6c6223f0d57
 
 # Build results
 [Dd]ebug/
