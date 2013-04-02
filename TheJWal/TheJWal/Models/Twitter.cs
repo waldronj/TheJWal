@@ -7,5 +7,6 @@ namespace TheJWal.Models
 {
     public class Twitter
     {
+
     }
 }
