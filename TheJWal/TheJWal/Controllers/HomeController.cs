@@ -12,21 +12,17 @@ namespace TheJWal.Controllers
     {
         public ActionResult Index()
         {
-            
-
+            ViewBag.Title = "Home Page";
             return View();
         }
 
         public ActionResult About()
         {
-            
-
             return View();
         }
 
         public ActionResult Portfolio()
         {
-
             return View();
         }
 
