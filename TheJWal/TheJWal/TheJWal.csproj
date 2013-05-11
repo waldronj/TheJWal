@@ -270,6 +270,7 @@
     <Content Include="Content\less\variables.less" />
     <Content Include="Content\less\wells.less" />
     <None Include="Properties\PublishProfiles\TheJWal.pubxml" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
